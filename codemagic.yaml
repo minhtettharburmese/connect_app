@@ -1,0 +1,10 @@
+workflows:
+  default-workflow:
+    name: Default Workflow
+    scripts:
+      - name: Create Android directory
+        script: flutter create .
+      - name: Flutter build APK
+        script: flutter build apk --release
+    artifacts:
+      - build/app/outputs/flutter-apk/*.apk
